@@ -22,7 +22,8 @@ import io from 'socket.io-client';
 import authService from '../services/authService'; 
 
 // --- CONFIGURATION ---
-const IP_MAY_TINH = '192.168.1.33';
+// Đọc IP từ biến môi trường
+const IP_MAY_TINH = process.env.EXPO_PUBLIC_SERVER_IP || '192.168.1.33';
 const API_URL = `http://${IP_MAY_TINH}:3000/api/users/conversations`;
 const SEARCH_URL = `http://${IP_MAY_TINH}:3000/api/users/search`;
 const FRIEND_REQ_URL = `http://${IP_MAY_TINH}:3000/api/users/friend-request`;

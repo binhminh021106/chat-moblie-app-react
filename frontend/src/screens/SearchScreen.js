@@ -13,8 +13,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// CẬP NHẬT IP CỦA BẠN VÀO ĐÂY
-const IP_MAY_TINH = '192.168.1.33';
+// Đọc IP từ biến môi trường
+const IP_MAY_TINH = process.env.EXPO_PUBLIC_SERVER_IP || '192.168.1.33';
 const API_URL = `http://${IP_MAY_TINH}:3000/api/users`;
 
 export default function SearchScreen({ navigation }) {
